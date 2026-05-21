@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias! - MIRC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #00ff66;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 500px;
+            text-align: center;
+            background: rgba(0, 20, 10, 0.8);
+            border: 2px solid #00ff66;
+            border-radius: 10px;
+            padding: 3rem 2rem;
+            box-shadow: 0 0 30px rgba(0, 255, 102, 0.2);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px #00ff66;
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            margin: 1.5rem auto;
+            background: #00ff66;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #0a0a0a;
+            animation: pulse 0.5s ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 1.5rem 0;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .highlight {
+            color: #00ff66;
+            font-weight: bold;
+            text-shadow: 0 0 5px #00ff66;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: #00ff66;
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid #00ff66;
+            cursor: pointer;
+        }
+
+        .btn-back:hover {
+            background: transparent;
+            color: #00ff66;
+            box-shadow: 0 0 15px #00ff66;
+        }
+
+        .contact-info {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #00ff66;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+
+        .whatsapp-link {
+            color: #00ff66;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .whatsapp-link:hover {
+            text-shadow: 0 0 10px #00ff66;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">M I R C</div>
+        <div class="subtitle">MANTENIMIENTO INTEGRAL<br>REPARACIONES CORPORATIVAS</div>
+
+        <div class="checkmark">✓</div>
+
+        <h1>¡Gracias por<br>contactarnos!</h1>
+
+        <p>Tu solicitud de cotización ha sido recibida exitosamente.</p>
+
+        <p>Nuestro equipo de especialistas se pondrá en contacto contigo <span class="highlight">dentro de las próximas 24 horas</span> para atender tu requerimiento.</p>
+
+        <p style="margin-top: 2rem; font-size: 0.95rem;">
+            Si necesitás una respuesta más rápida, podés <span class="highlight">contactarnos por WhatsApp</span>
+        </p>
+
+        <a href="https://wa.me/542645546700?text=Hola%20MIRC,%20tengo%20una%20consulta" class="btn-back">CONTACTAR POR WHATSAPP</a>
+
+        <a href="index.html" class="btn-back" style="display: block; margin-top: 1rem;">VOLVER AL INICIO</a>
+
+        <div class="contact-info">
+            <p>📧 pablooviedo58@gmail.com</p>
+            <p>📞 +54 264 554-6700</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">San Juan, Argentina</p>
+        </div>
+    </div>
+</body>
+</html>

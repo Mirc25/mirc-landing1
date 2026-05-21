@@ -14,73 +14,63 @@ function initForm() {
     
     if (form) {
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Frena el envío automático para validar
             
-            // Validar campos
-            const empresa = form.querySelector('input[type="text"]').value;
-            const telefono = form.querySelector('input[type="tel"]').value;
-            const email = form.querySelector('input[type="email"]').value;
-            const servicio = form.querySelector('select').value;
-            const detalles = form.querySelector('textarea').value;
-            const adjunto = form.querySelector('#adjunto');
+            // Capturar los elementos internos del formulario
+            const empresaInput = form.querySelector('input[type="text"]');
+            const telefonoInput = form.querySelector('input[type="tel"]');
+            const emailInput = form.querySelector('input[type="email"]');
+            const servicioSelect = form.querySelector('select');
+            const detallesTextarea = form.querySelector('textarea');
             
-            if (!empresa || !telefono || !email || !servicio || !detalles) {
+            // Validar campos vacíos
+            if (!empresaInput.value || !telefonoInput.value || !emailInput.value || !servicioSelect.value || !detallesTextarea.value) {
                 showNotification('Por favor complete todos los campos', 'error');
                 return;
             }
 
+            // Validar formato de Email
             const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailValido.test(email)) {
+            if (!emailValido.test(emailInput.value)) {
                 showNotification('Ingrese un email válido', 'error');
                 return;
             }
             
-            // Validar teléfono (al menos 10 dígitos)
-            const telefonoLimpio = telefono.replace(/\D/g, '');
-            if (telefonoLimpio.length < 10) {
+            // Validar largo del teléfono
+            const telefonoLimpio = telefonoInput.value.replace(/\D/g, '');
+            if (telefonoLimpio.length < 8) {
                 showNotification('Ingrese un teléfono válido', 'error');
                 return;
             }
 
-            if (adjunto && adjunto.files.length > 0) {
-                const file = adjunto.files[0];
-                const maxSize = 10 * 1024 * 1024;
-                const isImage = file.type.startsWith('image/');
-                const isVideo = file.type.startsWith('video/');
+            // Todo legal: Aseguramos los atributos 'name' para que FormSubmit reciba los datos con orden
+            empresaInput.name = "Empresa";
+            telefonoInput.name = "Telefono";
+            emailInput.name = "Email_Cliente";
+            servicioSelect.name = "Servicio_Solicitado";
+            detallesTextarea.name = "Detalles_Mensaje";
 
-                if (!isImage && !isVideo) {
-                    showNotification('Solo se permiten archivos de imagen o video', 'error');
-                    return;
-                }
-
-                if (file.size > maxSize) {
-                    showNotification('El archivo supera los 10MB', 'error');
-                    return;
-                }
-            }
-
-            const submitBtn = form.querySelector('button[type="submit"]');
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'ENVIANDO COTIZACIÓN...';
-            }
-
-            showNotification('Enviando cotización...', 'success');
+            // Mostrar el cartelito neón de éxito en la pantalla
+            showNotification('¡Enviando cotización solicitado con éxito! Nos contactaremos pronto.', 'success');
             
-            form.submit();
+            // Esperar 1.5 segundos para que el usuario vea el cartel y enviar el formulario real
+            setTimeout(() => {
+                    // Enviar el formulario con fetch para evitar que FormSubmit redirija
+                    const formData = new FormData(form);
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData
+                    }).then(() => {
+                        // Redirigir a la página de gracias después de enviar exitosamente
+                        setTimeout(() => {
+                            window.location.href = 'thanks.html';
+                        }, 1000);
+                    }).catch(error => {
+                        showNotification('Error al enviar el formulario', 'error');
+                        console.error('Error:', error);
+                    });
+            }, 1500);
         });
-
-        const fileInput = form.querySelector('#adjunto');
-        const fileStatus = form.querySelector('#fileUploadStatus');
-        if (fileInput && fileStatus) {
-            fileInput.addEventListener('change', () => {
-                if (fileInput.files.length > 0) {
-                    fileStatus.textContent = fileInput.files[0].name;
-                } else {
-                    fileStatus.textContent = 'si tienes foto o video muestranos';
-                }
-            });
-        }
     }
 }
 
