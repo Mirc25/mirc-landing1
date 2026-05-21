@@ -62,8 +62,10 @@ function initForm() {
             const submitBtn = form.querySelector('button[type="submit"]');
             if (submitBtn) {
                 submitBtn.disabled = true;
-                submitBtn.textContent = 'ENVIANDO...';
+                submitBtn.textContent = 'ENVIANDO COTIZACIÓN...';
             }
+
+            showNotification('Enviando cotización...', 'success');
             
             form.submit();
         });
