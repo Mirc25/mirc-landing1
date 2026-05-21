@@ -1,0 +1,123 @@
+{
+  "empresa": {
+    "nombre": "MIRC",
+    "razonSocial": "Mantenimiento Integral & Reparaciones Corporativas",
+    "slogan": "Soluciones Técnicas Integrales de Alta Ingeniería",
+    "ubicacion": "San Juan, Argentina",
+    "horarioAtencion": "Lunes a Viernes 08:00 - 18:00"
+  },
+  "colores": {
+    "neón": "#00ff66",
+    "neónAlternativo": "#39ff14",
+    "fondoOscuro": "#0a0b0d",
+    "fondoSeccion": "#12141c",
+    "textoPrimario": "#ffffff",
+    "textoSecundario": "#a0a5b5"
+  },
+  "divisiones": [
+    {
+      "id": "empresas-mineria",
+      "nombre": "MIRC Empresas & Minería",
+      "descripcion": "Mecánica pesada, mantenimiento de flotas y soldadura industrial",
+      "servicios": [
+        "Mantenimiento preventivo de flotas",
+        "Soldadura industrial avanzada",
+        "Automatización de sistemas",
+        "Reparaciones complejas en moliendas",
+        "Montaje de tableros eléctricos industriales"
+      ],
+      "imagen": "https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=600&fit=crop"
+    },
+    {
+      "id": "hogar-comercios",
+      "nombre": "MIRC Hogar & Comercios",
+      "descripcion": "Servicios residenciales y comerciales matriculados",
+      "servicios": [
+        "Servicios eléctricos matriculados",
+        "Instalaciones de gas certificadas",
+        "Plomería especializada",
+        "Mantenimiento de piscinas",
+        "Reparaciones estructurales"
+      ],
+      "imagen": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&fit=crop"
+    },
+    {
+      "id": "flota-infraestructura",
+      "nombre": "MIRC Flota e Infraestructura",
+      "descripcion": "Gestión integral de flotas y logística especializada",
+      "servicios": [
+        "Talleres móviles operacionales",
+        "Gestión de flotillas corporativas",
+        "Logística especializada",
+        "Mantenimiento preventivo",
+        "Asistencia in-situ"
+      ],
+      "imagen": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&fit=crop"
+    }
+  ],
+  "clientes": [
+    { "nombre": "BARRICK", "destino": "VELADERO" },
+    { "nombre": "TECHINT" },
+    { "nombre": "ECOGAS" },
+    { "nombre": "NATURGY" },
+    { "nombre": "OSSE SAN JUAN" },
+    { "nombre": "MUNICIPALIDADES DE SAN JUAN" }
+  ],
+  "certificaciones": [
+    {
+      "titulo": "ESTRUCTURA FISCAL",
+      "descripcion": "Capacidad completa de emisión de Factura A y cumplimiento AFIP/Rentas",
+      "icono": "📋"
+    },
+    {
+      "titulo": "HOMOLOGACIÓN",
+      "descripcion": "Listos para licitaciones estatales, municipales y auditorías mineras",
+      "icono": "✅"
+    },
+    {
+      "titulo": "PROTOCOLO DE SEGURIDAD",
+      "descripcion": "Personal cubierto bajo ART con Seguro de Responsabilidad Civil Comprensiva",
+      "icono": "🛡️"
+    },
+    {
+      "titulo": "LOGÍSTICA",
+      "descripcion": "Flota de talleres móviles y Taller Central Habilitado para mecánica pesada",
+      "icono": "🚚"
+    }
+  ],
+  "procesQuotizacion": [
+    {
+      "paso": 1,
+      "titulo": "RELEVAMIENTO",
+      "descripcion": "Contacto inicial y diagnóstico técnico del requerimiento"
+    },
+    {
+      "paso": 2,
+      "titulo": "COTIZACIÓN FORMAL",
+      "descripcion": "Emisión de presupuesto digital en PDF con validez estipulada y desglose transparente"
+    },
+    {
+      "paso": 3,
+      "titulo": "ORDEN DE TRABAJO",
+      "descripcion": "Asignación del equipo técnico certificado y ejecución bajo normas de seguridad"
+    },
+    {
+      "paso": 4,
+      "titulo": "CERTIFICACIÓN Y CIERRE",
+      "descripcion": "Firma de conformidad del cliente, despacho de informes y facturación"
+    }
+  ],
+  "contacto": {
+    "telefonoWhatsApp": "+54 264 6000000",
+    "email": "cotizaciones@mirc.com.ar",
+    "direccion": "San Juan, Argentina"
+  },
+  "meta": {
+    "titulo": "MIRC - Mantenimiento Integral & Reparaciones Corporativas",
+    "descripcion": "Soluciones técnicas integrales de alta ingeniería para flotas, minería, hogar y comercios en San Juan.",
+    "palabrasClave": "mantenimiento, reparaciones, industrial, minería, flotas, san juan",
+    "autor": "MIRC",
+    "año": 2026,
+    "version": "1.0"
+  }
+}
