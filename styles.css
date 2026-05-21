@@ -1466,6 +1466,19 @@ select.form-input option {
     text-transform: uppercase;
 }
 
+/* Mineria: mostrar imagen completa sin recorte */
+#miningTrack .fleet-slide {
+    min-width: 250px;
+}
+
+#miningTrack .fleet-slide img {
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
+    background: rgba(6, 9, 14, 0.92);
+    padding: 6px;
+}
+
 @keyframes fleetScroll {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
